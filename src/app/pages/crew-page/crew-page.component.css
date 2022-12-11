@@ -1,0 +1,217 @@
+.crew-section h3 {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin: 120px 0 0px 0;
+  letter-spacing: 4.725px;
+}
+
+.crew-section h3 span {
+  margin-right: 28px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.crew-section {
+  max-width: 70vw;
+  margin-left: 167px;
+}
+
+.crew-section .crew-content {
+  display: none;
+}
+
+.crew-section .crew-content .content-text {
+  text-transform: uppercase;
+}
+.crew-section .crew-content .content-text h1,
+h2 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  color: white;
+  font-size: 56px;
+  margin: 15px 0 27px 0;
+}
+.crew-section .crew-content .content-text h1 {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.crew-section .crew-content .content-text p {
+  font-family: "Barlow";
+  text-transform: initial;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  width: 27.2vw;
+}
+.crew-section .crew-content.active img {
+  mask-image: linear-gradient(to bottom, #000 90%, transparent 100%);
+}
+
+.crew-section .crew-content.active {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.crew-section .crew-content .crew-content-text {
+  position: relative;
+}
+.crew-section .dots {
+  display: flex;
+  margin-top: 120px;
+}
+
+.crew-section .dots span {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 24px 0 0;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: opacity 0.6s ease;
+  opacity: 0.2;
+}
+.crew-section .dots span.active {
+  opacity: 1;
+}
+
+.crew-section .dots span:hover {
+  opacity: 0.5;
+}
+
+/* fade effect */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .crew-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
+    max-width: 100%;
+  }
+  .crew-section h3 {
+    margin-bottom: 60px;
+    margin-top: 40px;
+    margin-right: auto;
+    font-size: 20px;
+  }
+  .crew-section .crew-content.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .crew-section img {
+    width: 456px;
+  }
+
+  .crew-content-text .content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .crew-content-text .content-text .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .crew-section .crew-content .content-text p {
+    width: auto;
+    text-align: center;
+  }
+
+  .crew-section .dots {
+    display: flex;
+    margin: 40px 0;
+  }
+
+  .crew-section .crew-content .content-text h1,
+  h2 {
+    font-size: 40px;
+  }
+  .crew-section .crew-content .content-text h1 {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+  }
+  .crew-section .crew-content .content-text p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .crew-section h3 {
+    margin: 11px auto 32px auto;
+  }
+  .crew-section .crew-content.active .content-text {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  .crew-section .crew-content.active {
+    flex-direction: column-reverse;
+  }
+  .crew-section .crew-content.active .content-text .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .crew-section .crew-content.active .content-text {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .crew-section .crew-content.active img {
+    mask-image: none;
+    width: 300px;
+  }
+
+  .crew-section .crew-content .content-text p {
+    width: auto;
+    text-align: center;
+  }
+
+  .crew-section .dots {
+    display: flex;
+    margin: 40px 0;
+  }
+
+  .crew-section .crew-content .content-text h1,
+  h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .crew-section .crew-content .content-text h1 {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+  }
+  .crew-section .crew-content .content-text p {
+    font-size: 1rem;
+  }
+} ;

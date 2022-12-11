@@ -1,0 +1,28 @@
+<section class="crew-section">
+  <h3 class="fade"><span>02</span>MEET YOUR CREW</h3>
+  <div
+    class="crew-content"
+    *ngFor="let crew of crewData.crew; let i = index"
+    [ngClass]="{ active: selectedIndex === i }"
+  >
+    <div class="crew-content-text fade">
+      <div class="content-text">
+        <div class="wrapper">
+          <h1>{{ crew.role }}</h1>
+          <h2>{{ crew.name }}</h2>
+          <p>
+            {{ crew.bio }}
+          </p>
+        </div>
+        <div *ngIf="indicators" class="dots">
+          <span
+            *ngFor="let dot of crewData.crew; let i = index"
+            [ngClass]="{ active: selectedIndex === i }"
+            (click)="selectedCrew(i)"
+          ></span>
+        </div>
+      </div>
+    </div>
+    <img src="{{ crew.images.png }}" alt="" />
+  </div>
+</section>

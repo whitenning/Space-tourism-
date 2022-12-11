@@ -1,0 +1,206 @@
+main {
+  display: flex;
+  width: 60vw;
+  margin: 251px 0 0 165px;
+}
+/* HOME PAGE MAIN CONTENT TEXT */
+main .main-text {
+  width: 450px;
+  height: 380px;
+}
+main .main-text h1 {
+  font-family: "Bellefair", serif;
+  font-size: 150px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: white;
+  margin: 1.5rem 0;
+}
+
+main .main-text h2 {
+  font-family: "Barlow Condensed";
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+main .main-text p {
+  font-family: "Barlow";
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+/* HOME PAGE MAIN CONTENT EXPLORE BTN*/
+main .explore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-left: auto;
+  overflow: visible;
+  position: relative;
+}
+main .explore .wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+main .explore p {
+  background-color: var(--color-white);
+  font-family: "Bellefair", serif;
+  font-size: 2rem;
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blue-dark);
+}
+
+main .explore .wrapper:hover {
+  border-radius: 50%;
+  padding: 4rem;
+  bottom: -4rem;
+  right: -4rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* HOME PAGE MAIN START END*/
+
+@media only screen and (max-width: 1420px) {
+  main {
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    margin: 90px auto;
+    position: relative;
+    padding-bottom: 0;
+  }
+
+  main .explore {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    bottom: -250px;
+    right: -100px;
+    margin-right: auto;
+    overflow: visible;
+    position: relative;
+  }
+  main .explore .wrapper:hover {
+    cursor: pointer;
+    padding: 3rem;
+    bottom: -3rem;
+    right: -3rem;
+  }
+  main .main-text {
+    width: 450px;
+    height: 380px;
+  }
+  main .main-text h1 {
+    font-size: 150px;
+    font-weight: 400;
+
+    margin: 1.5rem 0;
+  }
+
+  main .main-text h2 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  main .main-text p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  main .explore p {
+    width: 200px;
+    height: 200px;
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 620px) {
+  main .main-text {
+    width: auto;
+  }
+  main {
+    margin-top: 40px;
+  }
+
+  main .main-text h1 {
+    font-family: "Bellefair", serif;
+    font-size: 80px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    margin: 1.5rem 0;
+  }
+
+  main .main-text h2 {
+    font-family: "Barlow Condensed";
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  main .main-text p {
+    font-family: "Barlow";
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 32px;
+  }
+
+  main .explore p {
+    background-color: var(--color-white);
+    font-family: "Bellefair", serif;
+    font-size: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    color: var(--color-blue-dark);
+  }
+  main .explore {
+    bottom: -150px;
+    right: -75px;
+  }
+  main .explore .wrapper:hover {
+    padding: 2rem;
+    bottom: -2rem;
+    right: -2rem;
+  }
+}

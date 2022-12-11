@@ -1,0 +1,50 @@
+<div class="navbar container fade" [ngClass]="{ active: hamButton }">
+  <div class="nav-left">
+    <a routerLink="/" routerLinkActive="active">
+      <img src="../../../assets/logo.svg" alt=""
+    /></a>
+
+    <span></span>
+  </div>
+
+  <div class="nav-right">
+    <div class="button" (click)="hamBtn()" [ngClass]="{ active: hamButton }">
+      <span></span>
+    </div>
+    <ul>
+      <li [ngClass]="{ active: home }">
+        <a (click)="navIsActiveHome()" routerLink="/" routerLinkActive="active">
+          <span>00</span>HOME</a
+        >
+      </li>
+
+      <li [ngClass]="{ active: dest }">
+        <a
+          (click)="navIsActiveDest()"
+          routerLink="/destination"
+          routerLinkActive="active"
+        >
+          <span>01</span>DESTINATION</a
+        >
+      </li>
+
+      <li [ngClass]="{ active: crew }">
+        <a
+          (click)="navIsActiveCrew()"
+          routerLink="/crew"
+          routerLinkActive="active"
+          ><span>02</span>CREW</a
+        >
+      </li>
+
+      <li class="tech-link" [ngClass]="{ active: tech }">
+        <a
+          routerLink="/technology"
+          routerLinkActive="active"
+          (click)="navIsActiveTech()"
+          ><span>03</span>TECHNOLOGY</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>

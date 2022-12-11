@@ -1,0 +1,238 @@
+.navbar {
+  max-width: 96%;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+.navbar.container {
+  width: auto;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Navbar left */
+.navbar .nav-left {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.navbar .nav-left span {
+  margin-left: 4rem;
+  width: 473px;
+  height: 1px;
+  background-color: var(--color-white);
+  opacity: 0.25;
+  position: absolute;
+  z-index: 2;
+}
+/* Navbar left END*/
+/* Navbar right */
+.navbar .nav-right {
+  padding: 39px 0 0 0;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+}
+.navbar .nav-right ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 165px;
+  margin-left: 117px;
+}
+
+.navbar .nav-right ul li {
+  margin-right: 3rem;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  padding-bottom: 38px;
+}
+
+/* Hamburger button */
+.navbar .nav-right .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  background: transparent;
+  cursor: pointer;
+}
+.navbar .nav-right .button span {
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+}
+
+.navbar .nav-right .button span::after {
+  content: "";
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  top: -6px;
+  transition: 0.3s ease-in-out;
+  left: 0;
+}
+.navbar .nav-right .button span::before {
+  content: "";
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+.navbar .nav-right .button.active span::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar .nav-right .button.active span::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.navbar .nav-right .button.active span {
+  background-color: transparent;
+}
+/* Hamburger button */
+
+.navbar .nav-right ul li.active {
+  border-bottom: 3px solid var(--color-white);
+}
+.navbar .nav-right ul li span {
+  font-weight: bold;
+  color: white;
+  margin-right: 12px;
+}
+.navbar .nav-right ul li {
+  pointer-events: none;
+}
+.navbar .nav-right ul li a {
+  pointer-events: auto;
+}
+.navbar .nav-right ul li:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+/* Navbar right END*/
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1420px) {
+  .navbar .nav-left span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar .nav-right ul {
+    margin-right: 60px;
+  }
+  .navbar.container {
+    max-width: 96%;
+    padding-top: 0;
+    margin-left: auto;
+  }
+
+  .navbar .nav-right {
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar .nav-right ul {
+    justify-content: unset;
+    margin: 0 0 0 37px;
+  }
+  .navbar .nav-right ul li {
+    margin-right: 37px;
+  }
+
+  .navbar .nav-right ul li a span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .navbar.container {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .navbar .nav-left {
+    padding-top: 24px;
+    padding-left: 24px;
+  }
+  .navbar .nav-right {
+    position: static;
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+    width: 50px;
+    background: transparent;
+  }
+  .navbar.active {
+    align-items: baseline;
+  }
+  .navbar.active .nav-right {
+    background: rgba(255, 255, 255, 0.04);
+    width: 254px;
+    align-self: flex-end;
+
+    margin: 0;
+  }
+
+  .navbar.active .nav-right ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+    margin-bottom: auto;
+  }
+  .navbar.active .nav-right ul li {
+    margin: 0;
+    margin-left: auto;
+    width: 100%;
+    padding: 0;
+    height: 31px;
+    margin-bottom: 25px;
+  }
+
+  .navbar.active .nav-right {
+    position: absolute;
+    height: 100vh;
+    overflow-y: hidden;
+    right: -23px;
+    top: 0;
+    z-index: 2;
+  }
+  .navbar.active .nav-right .button {
+    align-self: flex-end;
+    margin: 33px 26px 64px 0;
+  }
+  .navbar.active .nav-right ul li a {
+  }
+  .navbar.active .nav-right ul li.active {
+    border-bottom: none;
+    border-right: 3px solid var(--color-white);
+  }
+
+  .navbar.active .nav-right ul li:hover {
+    border-bottom: none;
+    border-right: 3px solid rgba(255, 255, 255, 0.5);
+  }
+  .navbar .nav-right .button {
+    display: flex;
+  }
+  .navbar .nav-right ul {
+    display: none;
+  }
+
+  .navbar .nav-right ul li {
+    margin-right: 0;
+  }
+}

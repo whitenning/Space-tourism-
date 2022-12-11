@@ -1,0 +1,291 @@
+.destination-part h3 {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin: 120px 0 97px 165px;
+  letter-spacing: 4.725px;
+}
+
+.destination-part h3 span {
+  margin-right: 28px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.25);
+}
+.destination-part {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.destinations {
+  width: 60vw;
+  margin-left: 230px;
+}
+.destination {
+  display: none;
+  align-items: center;
+  position: relative;
+}
+.destination img {
+  margin-right: 157px;
+}
+.destination.active {
+  display: flex;
+}
+.destination .destination-content {
+  width: 20vw;
+}
+
+.destination .content-main ul {
+  display: flex;
+  align-items: center;
+}
+.destination .content-main ul li {
+  cursor: pointer;
+
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  margin-right: 36px;
+  margin-bottom: 37px;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.destination .content-main ul li:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+.destination .content-main ul li.active {
+  border-bottom: 3px solid white;
+}
+
+.destination .content-main h1 {
+  font-family: "Bellefair", serif;
+  font-size: 100px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+}
+.destination .content-main p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  padding-bottom: 54px;
+  border-bottom: 1px solid #383b4b;
+  margin-bottom: 28px;
+}
+
+.destination .content-detail {
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.destination .content-detail .detail {
+  margin-right: 79px;
+}
+.destination .content-detail .detail.travel {
+  margin-right: 0px;
+}
+.destination .content-detail .detail p {
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 17px;
+
+  text-align: center;
+  font-weight: 400;
+}
+.destination .content-detail .detail h4 {
+  font-family: "Bellefair", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: white;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .destinations {
+    margin: 0 auto;
+    width: auto;
+  }
+
+  .destination-part h3 {
+    margin-left: 0;
+  }
+
+  .destination img {
+    margin-right: 80px;
+  }
+  .destination .destination-content {
+    width: auto;
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .destination-part h3 {
+    align-self: flex-start;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-size: 20px;
+  }
+
+  .destination-part {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .destination.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .destination img {
+    margin: 0;
+  }
+  .destination .destination-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .content-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .destination .content-main ul {
+    margin-top: 53px;
+    justify-content: space-between;
+    width: 285.5px;
+  }
+  .destination .content-detail .detail {
+    width: 223px;
+    margin-right: 11px;
+    text-align: center;
+    padding-bottom: 62px;
+  }
+  .destination .content-detail .detail.travel {
+    margin-right: 0;
+  }
+  .destination .content-main ul li {
+    font-size: 1rem;
+  }
+  .destination .content-main p {
+    font-size: 16px;
+
+    padding-bottom: 49px;
+
+    margin-bottom: 28px;
+  }
+
+  .destination .content-detail .detail.travel {
+    margin-right: 0px;
+  }
+  .destination .content-detail .detail p {
+    font-size: 14px;
+    margin-bottom: 12px;
+    line-height: 17px;
+
+    text-align: center;
+    font-weight: 400;
+  }
+  .destination .content-detail .detail {
+    margin-right: 0;
+  }
+  .destination .content-detail .detail h4 {
+    font-family: "Bellefair", serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: white;
+  }
+}
+@media only screen and (min-width: 550px) and (max-width: 620px) {
+  .destination-part h3 {
+    margin-left: 38.5px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .destination .content-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .destination-part h3 {
+    align-self: center;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    font-size: 1rem;
+  }
+  .destination .content-main ul {
+    display: flex;
+    justify-content: space-between;
+    width: 237.5px;
+  }
+  .destination .content-main ul li {
+    margin-right: 0;
+    font-size: 14px;
+  }
+
+  .destination img {
+    width: 325px;
+    height: 325px;
+  }
+  .destination .content-main ul li .destination .content-main h1 {
+    font-size: 56px;
+  }
+  .destination .content-main p {
+    font-size: 15px;
+
+    padding-bottom: 32px;
+
+    margin-bottom: 32px;
+  }
+  .destination .content-detail .detail {
+    width: auto;
+  }
+  .destination .content-detail .detail.travel {
+    margin-right: 0px;
+  }
+  .destination .content-detail .detail p {
+    font-size: 14px;
+    margin-bottom: 12px;
+    line-height: 17px;
+
+    text-align: center;
+    font-weight: 400;
+  }
+  .destination .content-detail .detail {
+    margin-right: 0;
+  }
+  .destination .content-detail .detail h4 {
+    font-family: "Bellefair", serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: white;
+  }
+}

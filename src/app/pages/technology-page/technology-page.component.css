@@ -1,0 +1,304 @@
+.tech-section h3 {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin: 76px 0 4rem 166.5px;
+  letter-spacing: 4.725px;
+}
+
+.tech-section h3 span {
+  margin-right: 28px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.tech {
+  display: none;
+  margin-left: 165px;
+}
+.tech.active {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tech .text {
+  width: 470px;
+}
+
+.tech-section .control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: "Bellefair";
+  color: black;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+.tech-section .control:hover {
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.tech-section .tech .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.tech-section .tech .control.active {
+  background-color: white;
+  color: black;
+  border: none;
+  margin-right: 80px;
+}
+.tech-section .tech .text h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+}
+.tech-section .tech .text h1 {
+  font-family: "Bellefair";
+
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  text-transform: uppercase;
+  color: white;
+  margin: 11px 0 17px 0;
+}
+
+.tech-section .tech .text p {
+  font-family: "Barlow";
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .tech {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+@media only screen and (max-width: 1390px) {
+  .tech-section h3 {
+    margin-left: 0;
+  }
+  .tech-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+  }
+
+  .tech-section .tech.active {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .tech {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .tech img {
+    object-fit: contain;
+    margin-bottom: 56px;
+  }
+  .tech-section .tech .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .tech-section .tech .wrapper .controls .control {
+    display: flex;
+    margin-right: 32px;
+    margin-left: 32px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tech-section .tech .wrapper .controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tech-section .tech .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tech-section .tech .text h4 {
+    text-align: center;
+  }
+  .tech-section .tech .text h1 {
+    text-align: center;
+  }
+
+  .tech-section .tech .text p {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .tech-section h3 {
+    margin-left: 0;
+    margin-top: 40px;
+    align-self: baseline;
+  }
+  .tech-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+    width: 100%;
+  }
+
+  .tech-section .tech.active {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .tech {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .tech img {
+    width: 100vw;
+    margin-bottom: 56px;
+  }
+  .tech-section .tech .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .tech-section .tech .wrapper .controls .control {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    width: 60px;
+    height: 60px;
+  }
+
+  .tech-section .tech .wrapper .controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tech-section .tech .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tech-section .tech .text h4 {
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+  .tech-section .tech .text h1 {
+    text-align: center;
+
+    font-size: 40px;
+    line-height: 46px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .tech-section .tech .text p {
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 28px;
+
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .tech-section h3 {
+    margin: 24px auto 32px auto;
+    font-size: 1rem;
+  }
+
+  .tech-section .tech.active {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .tech {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .tech img {
+    width: 100vw;
+    margin-bottom: 34px;
+  }
+  .tech-section .tech .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .tech-section .tech .wrapper .controls .control {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .tech-section .tech .wrapper .controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tech-section .tech .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 0 24px;
+  }
+  .tech-section .tech .text h4 {
+    text-align: center;
+
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.36px;
+  }
+  .tech-section .tech .text h1 {
+    text-align: center;
+
+    font-size: 1.5rem;
+    line-height: 28px;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .tech-section .tech .text p {
+    text-align: center;
+
+    font-size: 15px;
+    line-height: 25px;
+
+    text-align: center;
+  }
+}

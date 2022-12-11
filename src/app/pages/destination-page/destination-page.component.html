@@ -1,0 +1,40 @@
+<div class="destination-part fade">
+  <h3><span>01</span>Pick your destination</h3>
+  <div class="destinations">
+    <div
+      class="destination"
+      *ngFor="let desti of dest.destinations; let i = index"
+      [ngClass]="{ active: selectedIndex === i }"
+    >
+      <img src="{{ desti.images.png }}" alt="" class="fade" />
+
+      <div class="destination-content">
+        <div class="content-main">
+          <ul class="dest-nav" *ngIf="indicators">
+            <li
+              *ngFor="let planet of dest.destinations; let i = index"
+              [ngClass]="{ active: selectedIndex === i }"
+              (click)="selectPlanet(i)"
+            >
+              {{ planet.name }}
+            </li>
+          </ul>
+          <h1>{{ desti.name }}</h1>
+          <p>
+            {{ desti.description }}
+          </p>
+        </div>
+        <div class="content-detail">
+          <div class="detail">
+            <p>Avg. distance</p>
+            <h4>{{ desti.distance }}</h4>
+          </div>
+          <div class="detail travel">
+            <p>Est. travel time</p>
+            <h4>{{ desti.travel }}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

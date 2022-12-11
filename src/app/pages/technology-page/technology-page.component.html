@@ -1,0 +1,38 @@
+<section class="tech-section">
+  <h3 class="fade"><span>03</span>SPACE LAUNCH 101</h3>
+  <div class="tech-content">
+    <div class="techs">
+      <div
+        class="tech"
+        *ngFor="let tech of techData.technology; let i = index"
+        [ngClass]="{ active: selectedIndex === i }"
+      >
+        <div class="wrapper">
+          <div class="controls">
+            <div
+              class="control"
+              *ngFor="let control of techData.technology; let i = index"
+              (click)="selectTech(i)"
+              [ngClass]="{ active: selectedIndex === i }"
+            >
+              {{ i + 1 }}
+            </div>
+          </div>
+          <div class="text">
+            <h4>THE TERMINOLOGY...</h4>
+            <h1>{{ tech.name }}</h1>
+            <p>{{ tech.description }}</p>
+          </div>
+        </div>
+        <img
+          *ngIf="screenWidth < 768; else elseBlock"
+          src="{{ tech.images.landscape }}"
+          alt=""
+        />
+        <ng-template #elseBlock
+          ><img src="{{ tech.images.portrait }}" alt=""
+        /></ng-template>
+      </div>
+    </div>
+  </div>
+</section>
