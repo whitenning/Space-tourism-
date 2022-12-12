@@ -18,17 +18,15 @@ export class TechnologyPageComponent implements OnInit {
   ngOnInit() {
     this.screenWidth = window.innerWidth;
     if (this.screenWidth < 768) {
-      this.compBgImage =
-        '../../assets/technology/background-technology-tablet.jpg';
+      this.compBgImage = 'assets/technology/background-technology-tablet.jpg';
       this.servie.bgPath.next(this.compBgImage);
     } else if (this.screenWidth < 768 && this.screenWidth < 500) {
-      this.compBgImage =
-        '../../assets/technology/background-technology-mobile.jpg';
+      this.compBgImage = 'assets/technology/background-technology-mobile.jpg';
       this.servie.bgPath.next(this.compBgImage);
     } else {
       if (this.screenWidth > 768)
         this.compBgImage =
-          '../../assets/technology/background-technology-desktop.jpg';
+          'assets/technology/background-technology-desktop.jpg';
       this.servie.bgPath.next(this.compBgImage);
     }
   }
